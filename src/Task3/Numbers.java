@@ -5,11 +5,9 @@ package Task3;
 
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Stack;
 
 
 class Numbers
@@ -18,13 +16,11 @@ class Numbers
 
     private static int maxInt = 1000;
 
-    public static void main(String[] args) throws IOException, Exception
+    public static void main(String[] args)
     {
-        Numbers.br = new BufferedReader(
-            new InputStreamReader(System.in)
-        );
+        br = new BufferedReader(new InputStreamReader(System.in));
 
-        int count = Numbers.readCount();
+        int count = readCount();
         if (count == 0) {
             System.out.println("0? Really? You are funny!");
             return ;
@@ -47,7 +43,7 @@ class Numbers
         Random random = new Random();
         int number;
         for (int i = 0; i < count; i++) {
-            number = random.ints(1, 1001).findFirst().getAsInt();
+            number = random.ints(1, maxInt+1).findFirst().getAsInt();
 
             if (number % 2 == 0) {
                 even[evenPointer] = number;

@@ -2,7 +2,6 @@
 package Task2;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.InvalidParameterException;
 
@@ -11,19 +10,17 @@ class QuadraticEquation
 {
     private static BufferedReader br;
 
-    public static void main(String[] args) throws IOException, Exception
+    public static void main(String[] args)
     {
-        QuadraticEquation.br = new BufferedReader(
-            new InputStreamReader(System.in)
-        );
+        br = new BufferedReader(new InputStreamReader(System.in));
 
-        double a = QuadraticEquation.readVar("A");
+        double a = readVar("A");
         if (a == 0) {
             throw new InvalidParameterException("[A] cannot be zero");
         }
 
-        double b = QuadraticEquation.readVar("B");
-        double c = QuadraticEquation.readVar("C");
+        double b = readVar("B");
+        double c = readVar("C");
 
         double d = b*b - 4*a*c;
 
