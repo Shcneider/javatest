@@ -51,15 +51,15 @@ class Numbers
             } else {
                 notEven[notEvenPointer] = number;
                 notEvenPointer++;
-
-                if (number % 3 == 0) {
-                    divBy3[divBy3Pointer] = number;
-                    divBy3Pointer++;
-                }
-                if (number % 5 == 0) {
-                    divBy5[divBy5Pointer] = number;
-                    divBy5Pointer++;
-                }
+            }
+            
+            if (number % 3 == 0) {
+                divBy3[divBy3Pointer] = number;
+                divBy3Pointer++;
+            }
+            if (number % 5 == 0) {
+                divBy5[divBy5Pointer] = number;
+                divBy5Pointer++;
             }
 
             numbers[i] = number;
